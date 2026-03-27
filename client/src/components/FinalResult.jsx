@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import MermaidSetup from './MermaidSetup';
-import RechartSetUp from './RechartSetUp';
 import { downloadPdf } from '../services/api';
+import RechartSetup from './RechartSetup';
+
 const markDownComponent = {
     h1: ({ children }) => (
         <h1 className="text-2xl font-bold text-indigo-700 mt-6 mb-4 border-b pb-2">
@@ -133,7 +134,7 @@ function FinalResult({ result }) {
             {result.charts?.length > 0 &&
                 <section>
                     <SectionHeader icon="📈" title="Visual Charts" color="indigo" />
-                    <RechartSetUp charts={result.charts} />
+                    <RechartSetup charts={result.charts} />
                     <p className="mt-3 text-xs text-gray-500 italic">
                         ℹ️ If you need this Chart for future reference or revision,
                         you can save it by taking a screenshot.

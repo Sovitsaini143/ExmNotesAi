@@ -1,6 +1,6 @@
 import React from 'react'
 import { Bar, BarChart, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
-function RechartSetUp({ charts }) {
+function RechartSetup({ charts }) {
     if (!charts || charts.length === 0) return null;
     const COLORS = ["#6366f1", "#22c55e", "#f59e0b", "#ef4444", "#06b6d4"];
     return (
@@ -67,4 +67,4 @@ function RechartSetUp({ charts }) {
     )
 }
 
-export default RechartSetUp
+export default RechartSetup
