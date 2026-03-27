@@ -1,14 +1,15 @@
 import express from "express"
 import dotenv from "dotenv"
-import connectDb from "./utils/connectDb.js"
 import authRouter from "./routes/auth.route.js"
 import cookieParser from "cookie-parser"
+import connectDB from "./utils/connectDB.js"
 import cors from "cors"
 import userRouter from "./routes/user.route.js"
 import notesRouter from "./routes/genrate.route.js"
 import pdfRouter from "./routes/pdf.route.js"
 import creditRouter from "./routes/credits.route.js"
 import { stripeWebhook } from "./controllers/credits.controller.js"
+
 dotenv.config()
 
 
@@ -48,5 +49,5 @@ app.use("/api/credit",creditRouter)
 
 app.listen(PORT,()=>{
     console.log(`✅ Server running on port ${PORT}`)
-    connectDb()
+    connectDB()
 })
