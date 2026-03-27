@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import MermaidSetup from "./MermaidSetup";
-import { downloadPdf } from "../services/api";
 import RechartSetUp from "./RechartSetUp";
+import { downloadPdf } from "../services/api";
 const markDownComponent = {
   h1: ({ children }) => (
     <h1 className="text-2xl font-bold text-indigo-700 mt-6 mb-4 border-b pb-2">
